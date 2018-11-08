@@ -91,6 +91,10 @@ message パラメーターにスペースがあったり日本語がある場合
 
 複数個アプリを立ち上げてても OK です。`CommunicationService` では接続してきている `CrossDeviceSample` に対して受け取ったメッセージをブロードキャストしています。
 
+以下のリンクから動作の動画を参照できます。
+
+https://youtu.be/YBm3oU8C6YM
+
 ## DesktopBridge フォルダ
 
 C++/WinRT を使って MFC アプリから Windows Runtime API を叩くサンプルです。
