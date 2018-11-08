@@ -1,0 +1,27 @@
+﻿<mah:MetroWindow
+    x:Class="CompanyB.SubApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CompanyB.SubApp"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Background="{DynamicResource MaterialDesignPaper}"
+    BorderThickness="1"
+    FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+    GlowBrush="{DynamicResource AccentColorBrush}"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TitleCaps="False"
+    mc:Ignorable="d">
+    <Grid>
+        <Viewbox Margin="10">
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="会社 B 用ツール" />
+        </Viewbox>
+    </Grid>
+</mah:MetroWindow>

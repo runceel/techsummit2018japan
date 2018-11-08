@@ -1,0 +1,78 @@
+{
+  "applications": [
+    {
+      "id": "App",
+      "executable": "PSFApp/PSFApp.exe",
+      "WorkingDirectory":  "PSFApp"
+    }
+  ],
+  "processes": [
+    {
+      "executable": ".*",
+      "fixups": [
+        {
+          "dll": "FileRedirectionFixup32.dll",
+          "config": {
+            "redirectedPaths": {
+              "knownFolders": [
+                {
+                  "id": "System",
+                  "relativePaths": [
+                    {
+                      "base": ".",
+                      "patterns": [
+                        "data\\.txt"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "SystemX86",
+                  "relativePaths": [
+                    {
+                      "base": ".",
+                      "patterns": [
+                        "data\\.txt"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "dll": "FileRedirectionFixup64.dll",
+          "config": {
+            "redirectedPaths": {
+              "knownFolders": [
+                {
+                  "id": "System",
+                  "relativePaths": [
+                    {
+                      "base": ".",
+                      "patterns": [
+                        "data\\.txt"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "SystemX86",
+                  "relativePaths": [
+                    {
+                      "base": ".",
+                      "patterns": [
+                        "data\\.txt"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

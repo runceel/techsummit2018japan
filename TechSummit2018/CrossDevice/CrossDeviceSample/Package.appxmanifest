@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" 
+         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" 
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+         xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4" 
+         xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" 
+         IgnorableNamespaces="uap mp rescap">
+  <Identity Name="3f2f7893-6f56-4628-9ddc-9131006cc39f" Publisher="CN=kaota" Version="1.0.0.0" />
+  <Properties>
+    <DisplayName>CrossDeviceSample</DisplayName>
+    <PublisherDisplayName>kaota</PublisherDisplayName>
+    <Logo>Images\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.17763.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
+      <uap:VisualElements DisplayName="CrossDeviceSample" Description="CrossDeviceSample" BackgroundColor="transparent" Square150x150Logo="Images\Square150x150Logo.png" Square44x44Logo="Images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Images\Wide310x150Logo.png">
+        </uap:DefaultTile>
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="techsummit2018demo" />
+        </uap:Extension>
+        <uap:Extension Category="windows.appService" EntryPoint="CrossDeviceSample.AppService.CrossDeviceAppService">
+          <uap3:AppService Name="CommunicationService" />
+        </uap:Extension>
+        <desktop:Extension Category="windows.fullTrustProcess" Executable="CrossDeviceSample.WPF\CrossDeviceSample.WPF.exe" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>
