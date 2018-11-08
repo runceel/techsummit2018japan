@@ -29,6 +29,7 @@ namespace CrossDeviceSample.WPF
         public MainWindow()
         {
             InitializeComponent();
+            Debug.WriteLine(Package.Current.Id.FamilyName);
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
